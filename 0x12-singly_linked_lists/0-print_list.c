@@ -6,8 +6,8 @@
  * @h: Const pointer of structure list_t
  * Return: Number of nodes
  */
-
 size_t print_list(const list_t *h)
+
 {
 	size_t s = 0;
 
