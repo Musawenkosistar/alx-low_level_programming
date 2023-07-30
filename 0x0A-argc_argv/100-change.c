@@ -2,7 +2,6 @@
 #include "main.h"
 
 /**
-
  * make change for an amount of money
  * @argc: number of arguments
  * @argv: array of arguments
@@ -34,7 +33,7 @@ int main(int argc, char *argv[])
 		while (num >= coins[f])
 		{
 			result++;
-			num -= coins[f];
+			num-= coins[f];
 		}
 	}
 
