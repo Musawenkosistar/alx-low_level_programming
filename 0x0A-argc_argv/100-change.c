@@ -1,43 +1,47 @@
 #include <stdio.h>
-#include "main.h"
+#include <stdlib.h>
 
 /**
- * make change for an amount of money
+ * main - Print changes for an amount of money.
  * @argc: number of arguments
- * @argv: array of arguments
+ * @argv: array with the arguments
  *
- * Return: 0 (success), 1 (error)
- */
+ * Return: Always 0
+ **/
+
 int main(int argc, char *argv[])
 {
-	int num, f, result;
-	int coins[] = {25, 10, 5, 2, 1};
+	int dev = 0, coins = 0;
+	char c[] = "Error";
 
 	if (argc != 2)
 	{
-		printf("Error\n");
+		printf("%s\n", c);
 		return (1);
 	}
-
-	num = atoi(argv[1]);
-	result = 0;
-
-	if (num < 0)
+	dev = atoi(argv[1]);
+	while (dev >= 25)
 	{
-		printf("0\n");
-		return (0);
+		dev -= 25;
+		coins++;
 	}
-
-	for (f = 0; f < 5 && num >= 0; f++)
+	while (dev >= 10)
 	{
-		while (num >= coins[f])
-		{
-			result++;
-			num-= coins[f];
-		}
+		dev -= 10;
+		coins++;
 	}
-
-	printf("%d\n", result);
+	while (dev >= 5)
+	{
+		dev -= 5;
+		coins++;
+	}
+	while (dev >= 2)
+	{
+		dev -= 2;
+		coins++;
+	}
+	if (dev == 1)
+		coins++;
+	printf("%d\n", coins);
 	return (0);
 }
-
