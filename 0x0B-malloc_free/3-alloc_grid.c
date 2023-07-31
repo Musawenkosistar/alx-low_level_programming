@@ -1,4 +1,3 @@
-#include <stdlib.h>
 #include "main.h"
 
 /**
@@ -6,7 +5,7 @@
  * @width: int 1
  * @height: int 2
  *
- * Return: Pointer
+ * Return: iPointer
  */
 int **alloc_grid(int width, int height)
 {
