@@ -4,7 +4,6 @@
 /**
  * find_listint_loop - Discovers the loop in a linked list
  * @head: linked list to search 
- *
  * Return: address of the meeting point where the loop starts, or NULL
  */
 listint_t *find_listint_loop(listint_t *head)
