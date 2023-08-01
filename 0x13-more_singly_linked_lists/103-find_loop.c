@@ -1,4 +1,5 @@
 #include "lists.h"
+#include <stdio.h>
 
 /**
  * find_listint_loop - Discovers the loop in a linked list
