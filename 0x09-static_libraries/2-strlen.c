@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * _strlen - recur the length of a string
  * @s: a string
@@ -6,16 +7,13 @@
  */
 int _strlen(char *s)
 {
-	int longi = 0;
+	int f = 1, sum = 0;
+	char pl = s[0];
 
-
-	while (*s != '\0')
+	while (pl != '\0')
 	{
-		longi++;
-		s++;
+		sum++;
+		pl = s[f++];
 	}
-
-
-	return (longi);
+	return (sum);
 }
-

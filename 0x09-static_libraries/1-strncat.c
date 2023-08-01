@@ -1,31 +1,32 @@
 #include "main.h"
+
 /**
- * _strncat - focus on two strings
+ * _strncat - Focus on two strings
  * @dest: input value
  * @src: input value
  * @n: input value
  *
- * Return: dest
+ * Return: Dest
  */
 char *_strncat(char *dest, char *src, int n)
 {
+	int f;
 	int i;
-	int a;
 
 
+	f = 0;
+	while (dest[f] != '\0')
+	{
+		f++;
+	}
 	i = 0;
-	while (dest[i] != '\0')
+	while (i < n && src[i] != '\0')
 	{
-		i++;
-	}
-	a = 0;
-	while (a < n && src[a] != '\0')
-	{
-	dest[i] = src[a];
+	dest[f] = src[i];
+	f++;
 	i++;
-	a++;
 	}
-	dest[i] = '\0';
+	dest[f] = '\0';
 	return (dest);
 }
 

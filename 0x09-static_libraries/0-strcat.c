@@ -1,4 +1,5 @@
 #include "main.h"
+
  /**
  * _strcat - focuses on two strings
  * @dest: input value
@@ -8,26 +9,16 @@
  */
 char *_strcat(char *dest, char *src)
 {
-	int i;
-	int j;
 
+	int f, n;
 
-	i = 0;
-	while (dest[i] != '\0')
+	for (f = 0; dest[f] != '\0'; f++)
 	{
-		i++;
 	}
-	j = 0;
-	while (src[j] != '\0')
+
+	for (n = 0; (dest[f + n] = *src++) != '\0'; n++)
 	{
-		dest[i] = src[j];
-		i++;
-		j++;
-	}		
-
-
-	dest[i] = '\0';
+	}
 	return (dest);
 }
-
 
