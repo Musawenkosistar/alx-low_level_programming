@@ -4,19 +4,16 @@
  * print_listint - Prints all the components of a linked list
  * @h: linked list of type listint_t to print
  *
- * Return: Number of nodes
+ * Return: Number of meeting points
  */
 size_t print_listint(const listint_t *h)
 {
-	size_t num = 0;
+	size_t a;
 
-	while (h)
+	for (a = 0; h; a++)
 	{
 		printf("%d\n", h->n);
-		num++;
 		h = h->next;
 	}
-
-	return (num);
+	return (a);
 }
-
