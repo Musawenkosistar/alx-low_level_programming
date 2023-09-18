@@ -6,15 +6,15 @@
  */
 int main(void)
 {
-	int product, max = 0, i, j, c = 0;
+	int product, max = 0, i, k, c = 0;
 	int numDigits = 6;
 	int d[6] = { 0 };
 
 	for (i = 999; i > 100; i--)
 	{
-		for (j = 999; j > 100; j--)
+		for (k = 999; k > 100; k--)
 		{
-			product = i * j;
+			product = i * k;
 			c = 0;
 			d[0] = d[1] = d[2] = d[3] = d[4] = d[5] = 0;
 			while (product)
@@ -23,7 +23,7 @@ int main(void)
 				product /= 10;
 				c++;
 			}
-			product = i * j;
+			product = i * k;
 			numDigits = c;
 			if (numDigits == 6)
 			{
